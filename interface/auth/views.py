@@ -9,10 +9,10 @@ create file : C:/Users/Raymond/git/testerlife/interface/auth/views.py
 create time :2016年11月1日
 '''
 
-from interface.auth import api , Resource
+from interface.auth import api , Resource,auth
+from flask.templating import render_template
 
-@api.resource('/')
-class HelloWorld(Resource):
-    def get(self):
-        return "Hello World !"
+@auth.route('/')
+def get():
+    return render_template('index.html')
 

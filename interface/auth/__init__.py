@@ -8,6 +8,6 @@ from flask_restful import Api, Resource
 
 
 auth = Blueprint('auth', __name__, template_folder='templates',
-                 static_folder='static')
+                 static_folder='assets')
 api = Api(auth)
 from interface.auth import views
