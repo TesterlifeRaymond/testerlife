@@ -10,17 +10,18 @@ create time :2016年11月1日
 '''
 
 from interface.auth import api , Resource, auth
-from flask import render_template , request
+from flask import render_template , request, url_for, redirect
 from interface import login
 from util.result.result import result
 
-
-@auth.route('/')
-def get():
-    return render_template('index.html')
+@auth.route('/' , methods=['GET', 'POST'])
+def homepage():
+    return render_template('login.html')
 
 @api.resource('/login')
 class Login(Resource):
     def post(self):
         args = request.form
-        return result.error(errMsg='Login Error', api='/auth/login', params=args)
+        if args['username'] == '123':
+            return {"result":"success"}
+        return {"result":"invalid"}
