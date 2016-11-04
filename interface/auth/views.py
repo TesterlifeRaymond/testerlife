@@ -9,12 +9,13 @@ create file : C:/Users/Raymond/git/testerlife/interface/auth/views.py
 create time :2016年11月1日
 '''
 
-from interface.auth import api , Resource, auth
 from flask import render_template , request
+
 from interface import login, login_user, login_required , current_user , logout_user
+from interface.auth import api , Resource, auth
 from interface.db import User
 from util.result.result import result
-from werkzeug import redirect
+
 
 @auth.route('/' , methods=['GET', 'POST'])
 def homepage():
@@ -23,7 +24,6 @@ def homepage():
 @login.user_loader
 def load_user(id):
     return User.query.filter_by(id=int(id)).first()
-
 
 @api.resource('/login')
 class Login(Resource):
