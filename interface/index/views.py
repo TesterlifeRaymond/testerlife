@@ -9,9 +9,9 @@ create file : C:/Users/Raymond/git/testerlife/interface/auth/views.py
 create time :2016年11月1日
 '''
 
-from interface.index import api , Resource, index
 from flask import render_template
-from interface import login_required
+from flask_login import login_required
+from . import api , index
 
 
 @index.route('/' , methods=['GET', 'POST'])

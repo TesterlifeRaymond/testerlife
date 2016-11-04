@@ -3,10 +3,10 @@
 """
     register auth blueprint 
 """
-from flask import Blueprint, request
-from flask_restful import Api, Resource
+from flask import Blueprint
+from flask_restful import Api
 
-auth = Blueprint('auth', __name__, template_folder='templates',
-                 static_folder='assets')
+auth = Blueprint('auth', __name__, template_folder='templates', static_folder='assets')
 api = Api(auth)
-from interface.auth import views
+
+from . import views

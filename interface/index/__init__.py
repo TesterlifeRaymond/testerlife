@@ -3,11 +3,11 @@
 """
     register index blueprint 
 """
-from flask import Blueprint, request
-from flask_restful import Api, Resource
+from flask import Blueprint
+from flask_restful import Api
 
 
-index = Blueprint('index', __name__, template_folder='templates',
-                 static_folder='assets')
+index = Blueprint('index', __name__, template_folder='templates', static_folder='assets')
 api = Api(index)
-from interface.index import views
+
+from . import views
