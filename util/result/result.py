@@ -12,9 +12,9 @@ create time :2016年11月3日
 class result:
     
     @staticmethod
-    def success(api):
-        return {'errMsg':None, 'result':'success', 'api':api}
+    def success():
+        return {'errMsg':None, 'result':'success'}
     
     @staticmethod
-    def error(errMsg, api, params):
-        return {'errMsg':errMsg, 'result':'failed', 'api':api, 'params':str(params)}
+    def error():
+        return {'errMsg':"Login Error", 'result':'invalid'}

@@ -2,7 +2,8 @@
 from interface import app
 from interface.auth import auth
 from interface.index import index
-
+from interface.db import db
+db.create_all()
 
 app.register_blueprint(auth, url_prefix='/auth')  # auth module blueprint 
 app.register_blueprint(index, url_prefix='/index')  # index module blueprint 
