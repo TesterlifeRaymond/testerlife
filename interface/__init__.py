@@ -2,7 +2,7 @@ import logging
 from logging.handlers import RotatingFileHandler
 from flask import Flask , redirect
 from flask_restful import Api, Resource
-from flask_login import LoginManager
+from flask_login import LoginManager, login_user, login_required  , logout_user , current_user
 from interface import config
 
 
