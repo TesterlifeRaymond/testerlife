@@ -35,7 +35,6 @@ def index():
 class login(Resource):
     def post(self):
         args = request.form
-        current_app.logger.info(args)
         user = User.query.filter_by(username=args.get('username')).first()
         if user and user.userpassword == args.get('password'):
             login_user(user, True)
