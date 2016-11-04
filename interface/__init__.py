@@ -16,7 +16,7 @@ login = LoginManager(app)
     app.logger is project logging module
 """
 
-handler = RotatingFileHandler('app.log', maxBytes=10000, backupCount=1)
+handler = RotatingFileHandler('../logs/app.log', maxBytes=10000, backupCount=1)
 handler.setFormatter(logging.Formatter(
     '%(asctime)s %(levelname)s: %(message)s '
     '[in %(name)s:%(lineno)d]'
