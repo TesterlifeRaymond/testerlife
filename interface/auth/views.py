@@ -45,11 +45,6 @@ class login(Resource):
 @api.resource('/logout')
 class logout(Resource):
     @login_required
-    def post(self):
-        if current_user:
-            logout_user()
+    def get(self):
+        logout_user()
         return result.success()
-
-        
-        
-            

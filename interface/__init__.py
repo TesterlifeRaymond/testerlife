@@ -27,9 +27,9 @@ handler.setFormatter(Formatter(
 handler.setLevel(DEBUG)
 app.logger.addHandler(handler)
 
-from interface.auth import auth
+from .auth import auth
 app.register_blueprint(auth, url_prefix='/auth')  # auth module blueprint
 
-from interface.index import index
+from .index import index
 app.register_blueprint(index, url_prefix='/index')  # index module blueprint
 
