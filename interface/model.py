@@ -1,10 +1,11 @@
-from interface import app
-from flask_sqlalchemy import SQLAlchemy
 from flask_login import  UserMixin
-db = SQLAlchemy(app)
+from . import db
+
+db.create_all()
+
 
 class User(db.Model, UserMixin):
-    __tablename__ = 'user'
+    __tablename__ = 'users'
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100))
