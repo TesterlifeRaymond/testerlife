@@ -1,8 +1,6 @@
 from flask_login import  UserMixin
 from . import db
 
-db.create_all()
-
 
 class User(db.Model, UserMixin):
     __tablename__ = 'users'
@@ -19,7 +17,7 @@ class User(db.Model, UserMixin):
         return '<User %r>' % self.username
 
     def __str__(self):
-        return '<Password %s>' % self.userpassword
+        return '<hash_password %s>' % self.userpassword
     
     def is_correct_password(self, password):
         if User.query.filter_by(userpassword=password):

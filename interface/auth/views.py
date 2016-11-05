@@ -9,7 +9,7 @@ create file : C:/Users/Raymond/git/testerlife/interface/auth/views.py
 create time :2016年11月1日
 '''
 
-from flask import render_template , request, current_app
+from flask import render_template , request, redirect , flash
 from flask_restful import Resource
 
 from interface.util.result.result import result
@@ -46,4 +46,4 @@ class logout(Resource):
     @login_required
     def get(self):
         logout_user()
-        return result.success()
+        return redirect('/auth')
