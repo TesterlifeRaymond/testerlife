@@ -1,4 +1,6 @@
 from flask_login import  UserMixin
+from werkzeug.security import generate_password_hash, check_password_hash
+
 from . import db
 
 
@@ -11,7 +13,7 @@ class User(db.Model, UserMixin):
 
     def __init__(self, username=None, userpassword=None):
         self.username = username
-        self.userpassword = userpassword
+        self.set_password(userpassword)
 
     def __repr__(self):
         return '<User %r>' % self.username
@@ -19,7 +21,10 @@ class User(db.Model, UserMixin):
     def __str__(self):
         return '<hash_password %s>' % self.userpassword
 
-    @staticmethod
-    def is_correct_password(password):
-        if User.query.filter_by(userpassword=password):
-            return True
+
+
+    def set_password(self, password):
+        self.hash_password = generate_password_hash(password)
+
+    def check_password(self, password):
+        return check_password_hash(self.hash_password, password)
