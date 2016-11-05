@@ -16,7 +16,8 @@ login.session_protection = "strong"
 login.login_view = 'auth.index'
 login.login_message = '请登入账号再进行下一步操作!'
 
-"""app.logger is project logging module
+"""
+    app.logger is project logging module
 """
 
 handler = RotatingFileHandler('logs/app.log', maxBytes=10000, backupCount=1)

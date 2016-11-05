@@ -13,6 +13,7 @@ class User(db.Model, UserMixin):
 
     def __init__(self, username=None, userpassword=None):
         self.username = username
+        self.hash_password = ''
         self.set_password(userpassword)
 
     def __repr__(self):
@@ -20,8 +21,6 @@ class User(db.Model, UserMixin):
 
     def __str__(self):
         return '<hash_password %s>' % self.userpassword
-
-
 
     def set_password(self, password):
         self.hash_password = generate_password_hash(password)
