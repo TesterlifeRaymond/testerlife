@@ -18,7 +18,8 @@ class User(db.Model, UserMixin):
 
     def __str__(self):
         return '<hash_password %s>' % self.userpassword
-    
-    def is_correct_password(self, password):
+
+    @staticmethod
+    def is_correct_password(password):
         if User.query.filter_by(userpassword=password):
             return True

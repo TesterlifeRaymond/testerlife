@@ -36,7 +36,7 @@ class login(Resource):
     def post(self):
         args = request.form
         user = User.query.filter_by(username=args.get('username')).first()
-        if user and user.userpassword == args.get('password'):
+        if user and user.is_correct_password(args.get('password')) :
             login_user(user, True)
             return result.success()
         return result.error()
