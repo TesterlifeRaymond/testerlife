@@ -1,2 +1,8 @@
 eclipse.preferences.version=1
+encoding//interface/admin/__init__.py=utf-8
+encoding//interface/admin/views.py=utf-8
 encoding//interface/auth/views.py=utf-8
+encoding//interface/index/views.py=utf-8
+encoding//interface/util/__init__.py=utf-8
+encoding//interface/util/result/__init__.py=utf-8
+encoding//interface/util/result/result.py=utf-8

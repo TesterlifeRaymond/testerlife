@@ -13,7 +13,7 @@ class result:
     
     @staticmethod
     def success(userType=None):
-        return {'errMsg':None, 'result':'success','userType':userType}
+        return {'errMsg':None, 'result':'success', 'userType':userType}
     
     @staticmethod
     def error(error):

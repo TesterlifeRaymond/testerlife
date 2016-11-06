@@ -6,7 +6,7 @@ Description :
 Author : Raymond
 change Activity :
 create file : C:/Users/Raymond/git/testerlife/interface/auth/views.py
-create time :2016å¹?11æœ?1æ—?
+create time :2016ï¿½?11ï¿½?1ï¿½?
 '''
 
 from flask import render_template
