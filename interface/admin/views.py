@@ -6,16 +6,15 @@ Description :
 Author : Raymond
 change Activity :
 create file : C:/Users/Raymond/git/testerlife/interface/auth/views.py
-create time :2016å¹?11æœ?1æ—?
+create time :2016å¹´11æœˆ1æ—¥
 '''
 
 from flask import render_template
 from flask_login import login_required
-from . import api , index
+from . import api , admin
 
 
-@index.route('/' , methods=['GET', 'POST'])
-@login_required
-def index():
-    return render_template('index.html')
+@admin.route('/' , methods=['GET', 'POST'])
+def admin():
+    return render_template('admin.html')
 

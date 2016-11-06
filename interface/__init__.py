@@ -34,6 +34,9 @@ app.register_blueprint(auth, url_prefix='/auth')  # auth module blueprint
 from .index import index
 app.register_blueprint(index, url_prefix='/index')  # index module blueprint
 
+from .admin import admin
+app.register_blueprint(admin, url_prefix='/admin')
+
 @app.route('/')
 def index():
     return redirect('/auth')

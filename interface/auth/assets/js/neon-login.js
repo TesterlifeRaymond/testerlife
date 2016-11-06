@@ -98,9 +98,9 @@ var neonLogin = neonLogin || {};
 									{
 										var redirect_url = baseurl+'/index';
 										
-										if(response.redirect_url && response.redirect_url.length)
+										if(response.userType == 'admin')
 										{
-											redirect_url = response.redirect_url;
+											redirect_url = '/admin';
 										}
 										
 										window.location.href = redirect_url;

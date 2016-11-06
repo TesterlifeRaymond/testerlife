@@ -9,12 +9,12 @@ create file : C:/Users/Raymond/git/testerlife/interface/auth/views.py
 create time :2016年11月1日
 '''
 
-from flask import render_template , request, redirect , flash
+from flask import render_template , request, redirect
 from flask_restful import Resource
 
-from interface.util.result.result import result
+from ..util.result.result import result
 from . import api , auth
-from .. import login, login_user, login_required , current_user , logout_user
+from .. import login, login_user, login_required , logout_user
 from ..model import User
 
 

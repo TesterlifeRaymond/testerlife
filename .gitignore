@@ -98,3 +98,5 @@ ENV/
 
 .gitignore
 /logs/
+/.project
+/.pydevproject
