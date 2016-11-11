@@ -14,7 +14,4 @@ from flask_login import login_required
 from . import api , admin
 
 
-@admin.route('/' , methods=['GET', 'POST'])
-def admin():
-    return render_template('admin.html')
 

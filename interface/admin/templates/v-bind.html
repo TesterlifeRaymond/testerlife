@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-bind</title>
+    <script src="http://cdn.bootcss.com/vue/2.0.5/vue.js"></script>
+</head>
+<body>
+    <div id="app8">
+        <ol>
+            <todo-item v-for="item in list" v-bind:todo ="item"></todo-item>
+        </ol>
+    </div>
+</body>
+<script src="../assets/js/v-bind.js"></script>
+</html>
