@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
     <script src="http://cdn.bootcss.com/vue/2.0.5/vue.js"></script>
-    <script src="../assets/js/vue-resource.js"></script>
+    <script src="assets/js/vue-resource.js"></script>
 </head>
 
 <body>
@@ -39,7 +39,7 @@
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-4">
                     <button type="button" v-on:click="click" class="btn btn-primary btn-lg btn-block" >Login</button>
-                    <h1>{{ result }}</h1>
+                    <h1 v-bind="result"></h1>
                 </div>
             </div>
         </form>
@@ -48,5 +48,5 @@
 
 </div>
 </body>
-<script src="../assets/js/login.js"></script>
+<script src="assets/js/login.js"></script>
 </html>
