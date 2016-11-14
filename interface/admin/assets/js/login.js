@@ -4,7 +4,7 @@ vue = new Vue({
     data:{
         username:'',
         password:'',
-        result:"",
+        result:'',
         apiUrl:'http://127.0.0.1:5000/admin/login'
     },
     methods:{
