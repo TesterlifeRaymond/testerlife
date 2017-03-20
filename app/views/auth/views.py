@@ -11,11 +11,9 @@ create time :2016年11月1日
 
 from flask import render_template , request, redirect
 from flask_restful import Resource
-
-from ..util.result.result import result
 from . import api , auth
-from .. import login, login_user, login_required , logout_user
-from ..model import User
+from ... import login, login_user, login_required , logout_user
+from ...model import User
 
 
 

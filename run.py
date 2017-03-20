@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-from interface import app
-from interface import db
+from app import app
+from app import db
 db.create_all()
 
 if __name__ == '__main__':

@@ -28,14 +28,12 @@ handler.setFormatter(Formatter(
 handler.setLevel(DEBUG)
 app.logger.addHandler(handler)
 
-from .auth import auth
+from .views.auth import auth
 app.register_blueprint(auth, url_prefix='/auth')  # auth module blueprint
 
-from .index import index
+from .views.index import index
 app.register_blueprint(index, url_prefix='/index')  # index module blueprint
 
-from .admin import admin
-app.register_blueprint(admin, url_prefix='/admin')
 
 @app.route('/')
 def index():
