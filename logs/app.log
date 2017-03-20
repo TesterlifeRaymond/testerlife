@@ -1,0 +1,134 @@
+2017-03-21 07:12:51,505 ERROR: Exception on /auth/login [POST] [in app:1587]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ray/.local/lib/python3.5/site-packages/flask_restful/__init__.py", line 477, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/ray/.local/lib/python3.5/site-packages/flask_restful/__init__.py", line 587, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/ray/git/testerlife/app/views/auth/views.py", line 42, in post
+    return result.error()
+NameError: name 'result' is not defined
+2017-03-21 07:15:01,504 ERROR: Exception on /auth/login [POST] [in app:1587]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ray/.local/lib/python3.5/site-packages/flask_restful/__init__.py", line 477, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/ray/.local/lib/python3.5/site-packages/flask_restful/__init__.py", line 587, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/ray/git/testerlife/app/views/auth/views.py", line 42, in post
+NameError: name 'result' is not defined
+2017-03-21 07:46:53,263 ERROR: Exception on /api/login [POST] [in app:1587]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ray/.local/lib/python3.5/site-packages/flask_restful/__init__.py", line 477, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/ray/.local/lib/python3.5/site-packages/flask_restful/__init__.py", line 587, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/ray/git/testerlife/app/apis/resource/login.py", line 37, in post
+    if username and args.get('password') == 'qwer1234':
+NameError: name 'username' is not defined
+2017-03-21 07:47:30,464 ERROR: Exception on /api/login [POST] [in app:1587]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ray/.local/lib/python3.5/site-packages/flask_restful/__init__.py", line 477, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/ray/.local/lib/python3.5/site-packages/flask_restful/__init__.py", line 587, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/ray/git/testerlife/app/apis/resource/login.py", line 37, in post
+    if user and args.get('password') == 'qwer1234':
+NameError: name 'username' is not defined
+2017-03-21 07:47:57,678 ERROR: Exception on /api/login [POST] [in app:1587]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ray/.local/lib/python3.5/site-packages/flask_restful/__init__.py", line 477, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/ray/.local/lib/python3.5/site-packages/flask_restful/__init__.py", line 587, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/ray/git/testerlife/app/apis/resource/login.py", line 37, in post
+    if user and args.get('password') == 'qwer1234':
+NameError: name 'username' is not defined
+2017-03-21 07:48:22,159 ERROR: Exception on /api/login [POST] [in app:1587]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ray/.local/lib/python3.5/site-packages/flask_restful/__init__.py", line 477, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/ray/.local/lib/python3.5/site-packages/flask_restful/__init__.py", line 587, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/ray/git/testerlife/app/apis/resource/login.py", line 37, in post
+    if user and args.get('password') == 'qwer1234':
+NameError: name 'username' is not defined
+2017-03-21 07:48:47,672 ERROR: Exception on /api/login [POST] [in app:1587]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ray/.local/lib/python3.5/site-packages/flask_restful/__init__.py", line 477, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/ray/.local/lib/python3.5/site-packages/flask_restful/__init__.py", line 587, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/ray/git/testerlife/app/apis/resource/login.py", line 44, in post
+    ''
+TypeError: set_res() takes 1 positional argument but 4 were given
+2017-03-21 07:51:30,575 ERROR: Exception on /api/login [POST] [in app:1587]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ray/.local/lib/python3.5/site-packages/flask_restful/__init__.py", line 477, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/ray/.local/lib/python3.5/site-packages/flask_restful/__init__.py", line 587, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/ray/git/testerlife/app/apis/resource/login.py", line 41, in post
+    self.base_res.set_res('用户登录成功','failed','')
+TypeError: set_res() takes 1 positional argument but 4 were given
+2017-03-21 07:54:40,878 ERROR: Exception on /api/login [POST] [in app:1587]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ray/.local/lib/python3.5/site-packages/flask_restful/__init__.py", line 477, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/ray/.local/lib/python3.5/site-packages/flask_restful/__init__.py", line 587, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/ray/git/testerlife/app/apis/resource/login.py", line 41, in post
+    self.base_res.set_res(dict(message='用户登录成功',result='success',response=''))
+TypeError: set_res() takes 1 positional argument but 2 were given

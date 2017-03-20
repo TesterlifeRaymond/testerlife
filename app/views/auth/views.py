@@ -16,34 +16,6 @@ from ... import login, login_user, login_required , logout_user
 from ...model import User
 
 
-
-@login.user_loader
-def load_user(user_id):
-    try:
-        user = User.query.get(int(user_id))
-        return user
-    except:
-        return None
-
 @auth.route('/' , methods=['GET', 'POST'])
 def index():
     return render_template('login.html')
-
-@api.resource('/login')
-class login(Resource):
-    def post(self):
-        args = request.form
-        user = User.query.filter_by(username=args.get('username')).first()
-        if args.get('username') == 'admin' and args.get('password') == user.userpassword:
-            return result.success('admin')
-        if user and user.userpassword == args.get('password'):
-            login_user(user, True)
-            return result.success()
-        return result.error()
-
-@api.resource('/logout')
-class logout(Resource):
-    @login_required
-    def get(self):
-        logout_user()
-        return redirect('/auth')

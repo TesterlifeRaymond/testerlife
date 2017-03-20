@@ -9,7 +9,6 @@ from . import config
 
 app = Flask(__name__)
 app.config.from_object(config)
-api = Api(app)
 db = SQLAlchemy(app)
 login = LoginManager(app)
 login.session_protection = "strong"
@@ -34,6 +33,8 @@ app.register_blueprint(auth, url_prefix='/auth')  # auth module blueprint
 from .views.index import index
 app.register_blueprint(index, url_prefix='/index')  # index module blueprint
 
+from .apis import API
+app.register_blueprint(API, url_prefix='/api')
 
 @app.route('/')
 def index():
